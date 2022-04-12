@@ -82,5 +82,10 @@ namespace Projekt.API.Services
             }
             return null;
         }
+
+        Task<int> IProjekt<Employee>.GetDate(int id, int week)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

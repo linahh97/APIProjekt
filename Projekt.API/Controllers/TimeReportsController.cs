@@ -109,5 +109,19 @@ namespace Projekt.API.Controllers
                 return StatusCode(StatusCodes.Status500InternalServerError, "Error to update data from database...");
             }
         }
+
+        [HttpGet("{id}/{week}")]
+        public async Task<ActionResult<TimeReport>> GetDate(int id, int week)
+        {
+            try
+            {
+                var result = await _projekt.GetDate(id, week);
+                return Ok(result);
+            }
+            catch (Exception)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, "Error to retrieve data from database...");
+            }
+        }
     }
 }

@@ -65,5 +65,11 @@ namespace Projekt.API.Services
             }
             return null;
         }
+
+        public async Task<int> GetDate(int id, int week)
+        {
+            var result = await _projekt.TimeReports.Where(t => t.EmployeeId == id && t.Week == week).CountAsync();
+            return result * 8;
+        }
     }
 }

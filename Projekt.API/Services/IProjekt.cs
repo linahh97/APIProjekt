@@ -14,6 +14,6 @@ namespace Projekt.API.Services
         Task<T> Add(T newEntity);
         Task<T> Delete(int id);
         Task<T> Update(T Entity);
-
+        Task<int> GetDate(int id, int week);
     }
 }

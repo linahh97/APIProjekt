@@ -67,5 +67,10 @@ namespace Projekt.API.Services
             }
             return null;
         }
+
+        public Task<int> GetDate(int id, int week)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
